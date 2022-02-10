@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="exmple_cicdFlow" doc:id="fc3da5f7-e9e9-4b60-87a7-ec47d5258152" >
 		<http:listener doc:name="Listener" doc:id="d72cee96-f059-448b-a8da-cb9ac97a7c8b" config-ref="HTTP_Listener_config" path="/cicd"/>
 		<set-payload value='"cicd process executed successfully"' doc:name="Set Payload" doc:id="bc235d6d-f5bb-45a7-9c17-54ac7d0e7617" />
+		<logger level="INFO" doc:name="Logger" doc:id="193f3ab4-4d52-4cf9-8b12-59766a42c69c" message="payload"/>
 	</flow>
 </mule>
